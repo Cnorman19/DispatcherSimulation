@@ -1,4 +1,4 @@
-# DispatcherSimulation School Project
+# Dispatcher Simulation School Project
 This Project I developed with zero assistance as it was a Senior project. I accomplished this by referencing documentation and utilizing web resources.
 
 # Project Details
