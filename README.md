@@ -3,7 +3,7 @@ You are to simulate a dispatcher using a priority queue system.   New processes 
 
 I am looking at the mechanism as you are NOT creating actual processes, just simulating them.  Functionality to be provided by you:
 
-## Priority based Ready Queue(s).  
-## 2. Blocked list.  
-## 3. Output of complete system status after every context switch showing ready, blocked, and running processes.  
-## 4. GUI for operations/control/output.
+### 1. Priority based Ready Queue(s).  
+### 2. Blocked list.  
+### 3. Output of complete system status after every context switch showing ready, blocked, and running processes.  
+### 4. GUI for operations/control/output.
