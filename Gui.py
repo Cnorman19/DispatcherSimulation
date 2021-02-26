@@ -18,7 +18,7 @@ class Gui(Frame):
         self.pack(fill=BOTH, expand=1)
 
         # buttons creation and configuration
-        populate_queues_button = Button(self, text = "Populate Ready Queue and Blocked List", fg = "black" , bg = "white", command = D.addProcess())
+        populate_queues_button = Button(self, text = "Populate Ready Queue and Blocked List", fg = "black" , bg = "white", command = D.populateReadyQueue())
         populate_queues_button.place(relx = 0.5, rely = 0.2, anchor = CENTER)
         populate_queues_button.config(height = 4, width = 40)
 
