@@ -1,4 +1,4 @@
-# DispatcherSimulation - Cameron Norman
+# Dispatcher Simulation - Cameron Norman
 
 ## This was a school project I completed with zero assistance. I accomplished this by reading documentation and utilizing online resources
 
