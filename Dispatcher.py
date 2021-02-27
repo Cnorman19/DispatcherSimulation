@@ -27,8 +27,6 @@ class Process:
 	def __str__(self):
 		return "ID: " + str(self.id) + " - " + self.name + " - " + " Status: " + self.status + " - " + " Priority: " + self.priority
 
-		
-
 class Dispatcher:
 	
 	# Initialize ReadyQueue and BlockedList Priority Queues
@@ -53,6 +51,7 @@ class Dispatcher:
 
 		cls.BlockedList.put(B1)
 		cls.BlockedList.put(B2)
+		print("Queues have been populated!\nPlease proceed with context switch!")
 	
 	# Remove Process from ReadyQueue
 	def removeProcess(cls):
@@ -105,9 +104,3 @@ class Dispatcher:
 			print(cls.BlockedList.queue[indexBlockedList])
 			indexBlockedList+=1
 		print("\n")
-
-D = Dispatcher()
-D.populateReadyQueue()
-D.printQueues()
-D.contextSwitch()
-D.removeProcess()
