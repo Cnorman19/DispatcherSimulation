@@ -1,0 +1,3 @@
+([('Gui',
+   '/Users/cameronnorman/Desktop/DispatcherSimulation/dist/Gui',
+   'EXECUTABLE')],)
