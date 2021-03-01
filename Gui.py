@@ -20,19 +20,27 @@ class Gui(Frame):
         self.pack(fill=BOTH, expand=1)
 
         # buttons creation and configuration
-        populate_queues_button = Button(self, text = "Populate Ready Queue and Blocked List", fg = "black" , bg = "#4682B4", command = D.populateReadyQueue)
-        populate_queues_button.place(relx = 0.5, rely = 0.2, anchor = CENTER)
-        populate_queues_button.config(height = 4, width = 40)
+        populate_queues_button = Button(self, text = "Populate Ready Queue \nand Blocked List", fg = "black" , bg = "#4682B4", command = D.populateReadyQueue)
+        populate_queues_button.place(relx = 0.8, rely = 0.15, anchor = CENTER)
+        populate_queues_button .config(height = 4, width = 20)
+
+        add_process_button = Button(self, text = "Add Process", fg = "black" , bg = "#4682B4", command = D.addProcess)
+        add_process_button.place(relx = 0.2, rely = 0.15, anchor = CENTER)
+        add_process_button.config(height = 4, width = 20)
+
+        remove_process_button = Button(self, text = "Remove Process", fg = "black" , bg = "#4682B4", command = D.removeProcess)
+        remove_process_button.place(relx = 0.5, rely = 0.15, anchor = CENTER)
+        remove_process_button.config(height = 4, width = 20)
 
         quit_Button = Button(self, text="QUIT", fg = "black" , bg = "#4682B4", command = self.exit)
         quit_Button.place(relx=0.5, rely=0.89, anchor=CENTER)
         quit_Button.config(height = 2, width = 40)
 
-        view_queues_Button = Button(self, text="View ReadyQueue and BlockedList\n(Must Populate First)", fg="black", bg="#4682B4", command = D.printQueues)
+        view_queues_Button = Button(self, text="View ReadyQueue and BlockedList", fg="black", bg="#4682B4", command = D.printQueues)
         view_queues_Button.place(relx=0.5, rely=0.45, anchor=CENTER)
         view_queues_Button.config(height=4, width=40)
 
-        context_switch_Button = Button(self, text="Perform Context Switch\n(Must Scroll To See Results)", fg="black", bg="#4682B4", command = D.contextSwitch)
+        context_switch_Button = Button(self, text="Perform Context Switch\n(Scroll up to see output before contextSwitch)", fg="black", bg="#4682B4", command = D.contextSwitch)
         context_switch_Button.place(relx=0.5, rely=0.7, anchor=CENTER)
         context_switch_Button.config(height=3, width=40)
 
@@ -45,7 +53,7 @@ class PrintLogger(): # create file like object
 
     def write(self, text):
         self.textbox.insert(tk.END, text) # write text to textbox
-            # could also scroll to end of textbox here to make sure always visible
+        self.textbox.see("end")    # could also scroll to end of textbox here to make sure always visible
 
     def flush(self): # needed for file like object
         pass
